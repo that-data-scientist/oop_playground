@@ -13,9 +13,10 @@ class RateCard(NamedTuple):
 
 
 class Hotel:
-    def __init__(self, name: str, rate_card: RateCard) -> None:
+    def __init__(self, name: str, rate_card: RateCard, rating: float) -> None:
         self.name = name
         self.rate_card = rate_card
+        self.rating = rating
 
     def get_rate(self, day: DayType) -> float:
         if day == DayType.WEEKDAY:
